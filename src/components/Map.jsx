@@ -1,13 +1,12 @@
 import React from "react";
 import GoogleMapReact from "google-map-react";
-
-const AnyReactComponent = ({ text }) => <div>{text}</div>;
+import Marker from "./Marker";
 
 const Map = () => {
   const defaultProps = {
     center: {
-      lat: 56.1304,
-      lng: 106.3468,
+      lat: -34.397,
+      lng: 150.644,
     },
     zoom: 5,
   };
@@ -21,7 +20,12 @@ const Map = () => {
         defaultCenter={defaultProps.center}
         defaultZoom={defaultProps.zoom}
       >
-        <AnyReactComponent lat={59.955413} lng={30.337844} text="My Marker" />
+        <Marker
+          //   key={place.id}
+          text={"place"}
+          lat={-34.397}
+          lng={150.644}
+        />
       </GoogleMapReact>
     </div>
   );
